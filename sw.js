@@ -41,21 +41,17 @@ $(document).keydown(function(e){
     if(e.which === 123){ 
  
        return false; 
- 
+
     } 
+    if (e.ctrlKey && 
+        (e.keyCode === 67 || 
+         e.keyCode === 86 || 
+         e.keyCode === 85 || 
+         e.keyCode === 117)) {
+        alert('not allowed');
+        return false;
+    } else {
+        return true;
+    }    
  
 }); 
-
-// Disable Ctrl key
-$document.onkeydown = function(e) {
-        if (e.ctrlKey && 
-            (e.keyCode === 67 || 
-             e.keyCode === 86 || 
-             e.keyCode === 85 || 
-             e.keyCode === 117)) {
-            alert('not allowed');
-            return false;
-        } else {
-            return true;
-        }
-};
