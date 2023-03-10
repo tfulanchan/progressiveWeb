@@ -47,7 +47,7 @@ $(document).keydown(function(e){
 }); 
 
 // Disable Ctrl key
-document.onkeydown = function(e) {
+$document.onkeydown = function(e) {
         if (e.ctrlKey && 
             (e.keyCode === 67 || 
              e.keyCode === 86 || 
